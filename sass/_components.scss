@@ -1,0 +1,238 @@
+//////////////////////////////////////
+//TYPOGRAPHY
+.heading-primary {
+    color: var(--color-grey-light);
+    margin-bottom: 6rem;
+    text-align: left;
+    
+    
+    &__light {
+    margin-bottom: none;
+    text-align: center;
+    font-size: 3rem;   
+    }
+
+    &__dark {
+        margin-bottom: none;
+        text-align: center;
+        font-size: 3rem;
+        color: var(--color-primary);
+    }
+
+    &__dark::after,
+    &__light::after {
+        display: block;
+        height: 3px;
+        background-color: var(--color-underline);
+        content: " ";
+        width: 10rem;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
+    &__main {
+        display: block; 
+        font-size:6rem;
+        font-weight:700;
+        margin-bottom: 4rem;
+        
+    }
+
+    &__sub {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 100;
+        padding: 5rem 0;        
+    }
+}
+
+.heading-secondary {
+    color: var(--color-green);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.heading-footer {
+    display: block;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: .5rem;
+    text-decoration: none;       
+}
+
+//////////////////////////////////////
+//BUTTON
+.btn-app img {
+    display: inline-block;
+    margin-right: 3rem;
+    height: 6rem;
+    width: auto;
+}
+
+//////////////////////////////////////
+//NAV
+.navigation-list  {
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 4rem;
+    
+
+    li {
+    
+        display: inline-block;
+         margin-left: 4rem;
+    }
+
+    a:link,
+    a:visited {
+    padding: 8px 0;
+    color: var(--color-grey-light);
+    text-decoration: none;
+    font-size: 200%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+    }
+
+    a:hover,
+    a:active {
+        border-bottom: 2px solid var(--color-underline);
+    }
+
+
+}
+
+//////////////////////////////////////
+//FLOW ICON
+.flow-box {
+
+    text-align: center;
+    
+
+    &__logo {
+    
+        margin-bottom: 1.5rem;
+        padding: 1rem 2.5rem;
+        width: 19rem;
+        height: auto;  
+    }
+
+    &__text {
+        color: var(--color-primary);
+        text-align: center;
+        margin-bottom: 6rem;
+        font-weight:300;
+        font-size: 1.6rem;
+    }
+}
+
+.center-text {
+
+    &__small{
+        margin: 4rem;
+    }
+
+    &__big {
+        margin-bottom: 6rem;
+    }
+    
+}
+
+//////////////////////////////////////
+//ARROW
+.arrow-box {
+  
+    &__logo {
+        margin-top: 7rem;
+        margin-left: 3rem;
+    }
+
+  
+}
+
+//////////////////////////////////////
+//PRICE CARD
+.price-card {
+        font-size: 3rem;
+        text-decoration: none;         
+        width: 100%;
+
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            background-color: var(--color-primary-1);
+            border-radius: .5rem;
+
+            	li {
+                    text-align: left;                    
+                    padding: 2.5rem 2rem;
+                    
+                }
+            }
+
+    &__details--middle {
+        background-color: var(--color-primary-2);
+        border-radius: .5rem;
+    }
+}
+
+.bean-box{
+    text-align: center;
+    margin-top: -.7rem;
+    
+    
+    &__logo {
+        width:5rem;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////
+//FOOTER
+.footer {
+padding: none;
+
+    &__text-box {
+         display: block;
+         text-align: center;      
+     }    
+
+    &__logo-box {
+    text-align: center;       
+    }
+
+    &__logo {          
+        width: 19rem;
+        height: auto;     
+    }
+}
+
+
+
+
+

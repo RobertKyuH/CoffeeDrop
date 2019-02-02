@@ -1,0 +1,78 @@
+.header {
+    height: 90vh;
+    background-image: url(../img/shutterstock_326070713@2x.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    &__nav {
+        position: absolute;
+        top: 11rem;
+        right: 15rem; 
+        height: 5rem;
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 7rem;
+        left: 15rem;  
+        
+    }
+
+    &__logo {
+        height: 5rem;
+        width: auto;       
+     
+    }
+
+    &__text-box {
+        position: absolute;
+        /* in relation to parent */
+        top: 43rem;
+        left: 15rem;
+ 
+    }
+
+    &__phone {
+        position: absolute;
+        /* in relation to parent */
+        top: 16.4em;
+        right: 10rem;
+    }
+}
+
+.section-work {
+    background-color: var(--color-grey-light);
+    padding: 7rem 0 40rem 0;
+   
+}
+
+
+
+.flow-box__center {
+    display: inline-block;
+}
+
+
+.section-price {
+    background-color: var(--color-primary);
+    padding: 7rem 0 50rem 0;
+    
+  
+}
+
+.section-map {
+    background-color: var(--color-grey-light);
+    padding: 7rem 0 50rem 0;
+  
+}
+
+.footer {
+    background-color: var(--color-primary);
+    padding: 1.5rem 0;
+    position: relative;
+  
+    
+   
+}
+
