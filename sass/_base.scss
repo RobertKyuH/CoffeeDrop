@@ -4,7 +4,7 @@ want to have all with pseudo-classes with such properties*/
 
     --color-grey-light: #f0eeee;
     --color-grey-light-1: #ccc;
-    --color-grey-light-2: hsla(0, 0%, 80%, 0.918);
+    --color-grey-light-2: hsla(0, 0%, 53%, 0.931);
 
     --color-primary: #373737;
     --color-primary-1: #484848;
@@ -21,6 +21,7 @@ want to have all with pseudo-classes with such properties*/
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
+$gutter-vertical-smallest: 3rem;
 $gutter-horizontal: 6rem;
 
 *,
@@ -36,17 +37,21 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px
 
-    /*@include respond(tab-land) { // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    @include respond(big-desktop) {
+        font-size: 75%; //1 rem = 12px; 12ppx/16px = 75% >1200px
     }
 
-    @include respond(tab-port) { // width < 900?
-        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    @include respond(tab-land) {
+        font-size: 56.25%; //1 rem = 9px; 9px/16px = 56.25% >900px
     }
-    
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
-    }*/
+
+    @include respond(tab-port) {
+        font-size: 50%; //1 rem = 8px; 8px/16px = 50% <900px
+    }
+
+    @include respond(phone) {
+    font-size: 45%; //1 rem = 8px; 8px/16px = 50% <600px
+    }
 
 }
 

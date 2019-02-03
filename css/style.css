@@ -1,9 +1,25 @@
+/*
+0 - 600px   Phone
+600 - 900px Tablet portrait
+900 - 1200px Tablet ladnscape
+1800 Big desktop
+
+ORDER: Base + typography > geeneral layout + grid > page layout > components
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em =16px
+*/
 /* UNIVERSAL SETTING
 want to have all with pseudo-classes with such properties*/
 :root {
   --color-grey-light: #f0eeee;
   --color-grey-light-1: #ccc;
-  --color-grey-light-2: hsla(0, 0%, 80%, 0.918);
+  --color-grey-light-2: hsla(0, 0%, 53%, 0.931);
   --color-primary: #373737;
   --color-primary-1: #484848;
   --color-primary-2: #595959;
@@ -21,18 +37,19 @@ want to have all with pseudo-classes with such properties*/
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  /*@include respond(tab-land) { // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-    }
-
-    @include respond(tab-port) { // width < 900?
-        font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    }
-    
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
-    }*/ }
+  font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -71,6 +88,9 @@ body {
     font-size: 2.5rem;
     font-weight: 100;
     padding: 5rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary__sub {
+        display: none; } }
 
 .heading-secondary {
   color: var(--color-green);
@@ -90,6 +110,17 @@ body {
   margin-right: 3rem;
   height: 6rem;
   width: auto; }
+  @media only screen and (max-width: 56.25em) {
+    .btn-app img {
+      margin-bottom: 2rem;
+      height: 8rem;
+      width: auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn-app img {
+      display: block;
+      margin-bottom: 2rem;
+      height: 8rem;
+      width: auto; } }
 
 .nav {
   float: right;
@@ -97,10 +128,18 @@ body {
   list-style: none;
   margin-left: 4rem;
   text-align: right; }
+  @media only screen and (max-width: 56.25em) {
+    .nav {
+      float: left;
+      display: none; } }
   .nav li {
     display: inline-block;
     margin-left: 4rem;
     padding-top: 1.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav li {
+        display: block;
+        text-align: left; } }
   .nav li a:link,
   .nav li a:visited {
     color: var(--color-grey-light);
@@ -109,16 +148,30 @@ body {
     border-bottom: 2px solid transparent;
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s; }
+    @media only screen and (max-width: 56.25em) {
+      .nav li a:link,
+      .nav li a:visited {
+        display: block;
+        border: 0;
+        text-align: left; } }
   .nav li a:hover,
   .nav li a:active {
     border-bottom: 2px solid var(--color-underline); }
+    @media only screen and (max-width: 56.25em) {
+      .nav li a:hover,
+      .nav li a:active {
+        border: 0; } }
 
-.mobile-nav {
-  margin: 4rem 0;
+.mobile-nav i {
+  margin: 4rem 1rem;
   width: 5rem;
+  font-size: 4rem;
   float: right;
   cursor: pointer;
   display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .mobile-nav i {
+      display: inline-block; } }
 
 .sticky-nav {
   position: fixed;
@@ -128,10 +181,18 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow);
   z-index: 9999; }
+  @media only screen and (max-width: 56.25em) {
+    .sticky-nav {
+      color: var(--color-primary); } }
   .sticky-nav .nav li a:link,
   .sticky-nav .nav li a:visited {
     padding: 8px 0;
-    color: var(--color-primary); }
+    color: var(--color-primary);
+    border: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .sticky-nav .nav li a:link,
+      .sticky-nav .nav li a:visited {
+        padding: 0; } }
 
 .flow-box {
   text-align: center; }
@@ -156,6 +217,10 @@ body {
 .arrow-box__logo {
   margin-top: 7rem;
   margin-left: 3rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .arrow-box {
+    display: none; } }
 
 .price-card {
   font-size: 3rem;
@@ -197,27 +262,27 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  /*@include respond(tab-port) {
-        max-width: 50rem;
-        padding: 0 3rem;
-    }*/ }
+  margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem;
-    /*@include respond(tab-port) {
-            margin-bottom: $gutter-vertical-small;
-        }*/ }
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row [class^="col-"] {
-    float: left;
-    /*@include respond(tab-port) {
-            width: 100% !important;
-        }*/ }
+    float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem;
-      /*@include respond(tab-port) {
-                margin-right: 0;
-                margin-bottom: $gutter-vertical-small;
-            } */ }
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -243,17 +308,27 @@ body {
     margin: 3rem 0;
     height: 5rem;
     width: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .header__logo {
+        float: left;
+        margin: 3rem 3rem; } }
   .header__text-box {
     position: absolute;
     /* in relation to parent */
-    top: 43rem; }
+    top: 43rem;
+    margin: 3rem 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__text-box {
+        margin: 3rem 3rem; } }
   .header__phone {
     position: absolute;
     /* in relation to parent */
     bottom: 0;
-    right: 10rem;
-    height: 70%;
-    width: auto; }
+    right: 5rem;
+    height: 60%; }
+    @media only screen and (max-width: 56.25em) {
+      .header__phone {
+        display: none; } }
 
 .nav {
   margin: 4rem 0;
@@ -262,6 +337,9 @@ body {
 .section-work {
   background-color: var(--color-grey-light);
   padding: 10rem 0 50rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section-work {
+      padding: 10rem 1rem 100rem 1rem; } }
 
 .flow-box__center {
   display: inline-block; }
@@ -269,6 +347,9 @@ body {
 .section-price {
   background-color: var(--color-primary);
   padding: 10rem 0 50rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section-price {
+      padding: 10rem 2rem 135rem 2rem; } }
 
 .section-map {
   background-color: var(--color-grey-light); }
@@ -277,33 +358,3 @@ body {
   background-color: var(--color-primary);
   padding: 1.5rem 0;
   position: relative; }
-
-/*
-0 - 600px   Phone
-600 - 900px Tablet portrait
-900 - 1200px Tablet ladnscape
-1800 Big desktop
-
-
-$breakpoint argument choices:
--phone
--tab-port
--tab-land
--big-desktop
-
-1em =16px
-
-@mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };    //600px
-    }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };     //900px
-    }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };    //1200px
-    }
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content };    //1800
-    }
-}*/

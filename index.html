@@ -5,7 +5,7 @@
     <!-- render to size viewpoint -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CoffeeDrop is a premium coffe delivery service in Nespresso style."/>
-    <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
@@ -19,22 +19,20 @@
     <header class="header">    
         <nav>
             <div class="row">
-                    <img src="img/logo.svg" alt="CoffeeDrop logo" class="header__logo"/>
-                    <img src="img/app-mockup@2x.png" alt="Tele logo" class="header__phone"/>
-                <ul class="nav">
+                    <img src="img/logo.svg" alt="CoffeeDrop logo" class="header__logo"/>                    
+                <ul class="nav js--nav">
                         <li><a href="#login">Login</a></li>
                         <li><a href="#ios">Download iOS on the App Store</a></li>
                         <li><a href="#android">Get it on Google Play</a></li>
                 </ul>
-                <a class="mobile-nav"><img src="img/menu.svg"></i></a>
+                <a class="mobile-nav js--mobile-nav"><i class="ion-md-menu"></i></a>
+                <div class="row">
+                    <img src="img/app-mockup@2x.png" alt="Tele logo" class="header__phone"/>
+                </div>
+            
             </div>
         </nav>
-   
- 
-        
-        <!-- <div class="header__phone-box">        
-            <img src="img/app-mockup@2x.png" alt="Tele logo" class="header__phone"/>
-          </div> -->
+
         <div class="row">
             <div class="header__text-box">
                 <h1 class="heading-primary">
@@ -44,6 +42,8 @@
 
                 <a href="#" class="btn-app"><img src="img/app-store@2x.png" alt="App Store Button"/></a>
                 <a href="#" class="btn-app"><img src="img/google-play@2x.png" alt="Play Store Button"/></a>
+                
+
             </div>
         </div>
     </header>
