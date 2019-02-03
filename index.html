@@ -5,6 +5,8 @@
     <!-- render to size viewpoint -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CoffeeDrop is a premium coffe delivery service in Nespresso style."/>
+    <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
@@ -14,41 +16,41 @@
   <body>
 
     
-    <header class="header">
-
-    <div class="header__nav">
+    <header class="header">    
         <nav>
-           <ul class="navigation-list">
-                <li><a href="#login">Login</a></li>
-                <li><a href="#ios">Download iOS on the App Store</a></li>
-                <li><a href="#android">Get it on Google Play</a></li>
-              </ul>
+            <div class="row">
+                    <img src="img/logo.svg" alt="CoffeeDrop logo" class="header__logo"/>
+                    <img src="img/app-mockup@2x.png" alt="Tele logo" class="header__phone"/>
+                <ul class="nav">
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#ios">Download iOS on the App Store</a></li>
+                        <li><a href="#android">Get it on Google Play</a></li>
+                </ul>
+                <a class="mobile-nav"><img src="img/menu.svg"></i></a>
+            </div>
         </nav>
-
-    </div>
-      
-        <div class="header__logo-box">        
-          <img src="img/logo.svg" alt="CoffeeDrop logo" class="header__logo"/>
-        </div> 
+   
+ 
         
-        <div class="header__phone-box">        
+        <!-- <div class="header__phone-box">        
             <img src="img/app-mockup@2x.png" alt="Tele logo" class="header__phone"/>
-          </div>
-       
-        <div class="header__text-box">
-            <h1 class="heading-primary">
-              <span class="heading-primary__main">Recycle your <br>Nespresso in style!</span>
-              <span class="heading-primary__sub">We can recycle your coffee pods for<br>cashback or free coffee!</span>
-            </h1>
+          </div> -->
+        <div class="row">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                <span class="heading-primary__main">Recycle your <br>Nespresso in style!</span>
+                <span class="heading-primary__sub">We can recycle your coffee pods for<br>cashback or free coffee!</span>
+                </h1>
 
-            <a href="#" class="btn-app"><img src="img/app-store@2x.png" alt="App Store Button"/></a>
-            <a href="#" class="btn-app"><img src="img/google-play@2x.png" alt="Play Store Button"/></a>
+                <a href="#" class="btn-app"><img src="img/app-store@2x.png" alt="App Store Button"/></a>
+                <a href="#" class="btn-app"><img src="img/google-play@2x.png" alt="Play Store Button"/></a>
+            </div>
         </div>
     </header>
 
     <main>
 
-      <section class="section-work">
+      <section class="section-work js--section-work">
           <div class="center-text__big">
               <h2 class="heading-primary__dark">
                   How it works
@@ -158,7 +160,7 @@
                             </h3>
                     </div>
                     
-                    <div class="price-card">
+                    <div class="price-card js--wp-1">
                             <div class="price-card__details">
                                 <ul>
                                     <li>Ristretto = 5p</li>
@@ -177,13 +179,17 @@
       </section>
 
       <section class="section-map">
-        <div class="row">
+        <div class="map">
+
+        </div>
+
+        <!-- <div class="row">
                 <div class="center-text__big">
                         <h2 class="heading-primary__dark">
                                 We have locations across the country!
                         </h2>
-                    </div> 
-        </div>
+                </div> 
+        </div> -->
       </section>
     </main>
 
@@ -202,5 +208,10 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>    
+    <script src="js/gmaps.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
