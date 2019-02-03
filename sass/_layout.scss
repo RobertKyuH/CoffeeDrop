@@ -5,45 +5,37 @@
     background-position: top;
     position: relative;
     
-    &__nav {
-        position: absolute;
-        top: 11rem;
-        right: 15rem; 
-        height: 5rem;
-    }
-
-    &__logo-box {
-        position: absolute;
-        top: 7rem;
-        left: 15rem;  
-        
-    }
-
     &__logo {
+        margin:3rem 0;
         height: 5rem;
-        width: auto;       
-     
+        width: auto;     
     }
 
     &__text-box {
         position: absolute;
         /* in relation to parent */
         top: 43rem;
-        left: 15rem;
- 
+        
     }
 
     &__phone {
         position: absolute;
         /* in relation to parent */
-        top: 16.4em;
+        bottom: 0;
         right: 10rem;
+        height: 70%;
+        width: auto;
     }
+}
+
+.nav {
+    margin:4rem 0;
+    width: auto;
 }
 
 .section-work {
     background-color: var(--color-grey-light);
-    padding: 7rem 0 40rem 0;
+    padding: 10rem 0 50rem 0;
    
 }
 
@@ -56,23 +48,20 @@
 
 .section-price {
     background-color: var(--color-primary);
-    padding: 7rem 0 50rem 0;
+    padding: 10rem 0 50rem 0;
     
   
 }
 
 .section-map {
-    background-color: var(--color-grey-light);
-    padding: 7rem 0 50rem 0;
+    background-color: var(--color-grey-light); 
   
 }
 
 .footer {
     background-color: var(--color-primary);
     padding: 1.5rem 0;
-    position: relative;
-  
-    
+    position: relative;  
    
 }
 
