@@ -1,3 +1,5 @@
+////////////////
+//CLEAR FLOAT
 @mixin clearfix {
     &::after {
         content: "";
@@ -13,14 +15,12 @@
     transform: translate(-50%, -50%);    
 }
 
-//Media query manager
+//MEDIA QUERY MANAGER
 /*
 0 - 600px   Phone
 600 - 900px Tablet portrait
 900 - 1200px Tablet ladnscape
 1800 Big desktop
-
-ORDER: Base + typography > geeneral layout + grid > page layout > components
 
 $breakpoint argument choices:
 -phone
@@ -30,7 +30,6 @@ $breakpoint argument choices:
 
 1em =16px
 */
-
 
 @mixin respond ($breakpoint) {
     @if $breakpoint == phone {
