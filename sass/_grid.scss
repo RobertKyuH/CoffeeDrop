@@ -1,23 +1,18 @@
+////////////////////////
+//SET UP FOR GRID
 .row {
     //1140px = 10px * 1rem It is max space if is smaller then is 100%
     max-width: $grid-width;
-    margin: 0 auto;
+    margin: 0 auto;    
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
 
-        /*@include respond(tab-port) {
+        @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
-        }*/
-    }
-    
-    /*@include respond(tab-port) {
-        max-width: 50rem;
-        padding: 0 3rem;
-    }*/
-
-    //@include clearfix;
-
+        }       
+    }    
+   
     @mixin clearfix {
         &::after {
             content: "";
@@ -30,17 +25,22 @@
         float: left;
 
         &:not(:last-child) {
-            margin-right: $gutter-horizontal;
-
-            /*@include respond(tab-port) {
+            margin-right: $gutter-horizontal; 
+            
+            @include respond(tab-port) {
                 margin-right: 0;
                 margin-bottom: $gutter-vertical-small;
-            } */           
+            }
+
+            @include respond(phone) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-smallest;
+            }
         }
 
-        /*@include respond(tab-port) {
+        @include respond(tab-port) {
             width: 100% !important;
-        }*/
+        }      
     }
 
     .col-1-of-2 {
@@ -71,5 +71,4 @@
     .col-1-of-5 {
         width: calc((100% - 4 * #{$gutter-horizontal}) / 5);
     }
-
 }

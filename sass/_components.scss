@@ -4,8 +4,7 @@
     color: var(--color-grey-light);
     margin-bottom: 6rem;
     text-align: left;
-    
-    
+
     &__light {
     margin-bottom: none;
     text-align: center;
@@ -42,7 +41,11 @@
         display: block;
         font-size: 2.5rem;
         font-weight: 100;
-        padding: 5rem 0;        
+        padding: 5rem 0; 
+        
+        @include respond(phone) {
+            display: none;
+        }
     }
 }
 
@@ -55,10 +58,10 @@
 
 .heading-footer {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     padding: .5rem;
-    text-decoration: none;       
+     
 }
 
 //////////////////////////////////////
@@ -68,6 +71,19 @@
     margin-right: 3rem;
     height: 6rem;
     width: auto;
+
+    @include respond(tab-port) {
+        margin-bottom: 2rem;
+        height: 8rem;
+        width: auto;
+    }
+
+    @include respond(phone) {
+        display: block;
+        margin-bottom: 2rem;
+        height: 8rem;
+        width: auto;
+    }
 }
 
 //////////////////////////////////////
@@ -78,12 +94,22 @@
     list-style: none;
     margin-left: 4rem;
     text-align: right;
+
+    @include respond(tab-port) {
+        float: left;
+        display: none;       
+    }
     
 
    & li {    
         display: inline-block;
         margin-left: 4rem;
-        padding-top: 1.5rem;        
+        padding-top: 1.5rem; 
+        
+        @include respond(tab-port) {
+            display: block;
+            text-align: left;            
+        }
     }
 
     & li a:link,
@@ -94,26 +120,39 @@
         border-bottom: 2px solid transparent;
         -webkit-transition: border-bottom 0.2s;
         transition: border-bottom 0.2s;
+
+        @include respond(tab-port) {
+            display: block;
+            border: 0;
+            text-align: left;
+        }
+        
     }
 
     & li a:hover,
     & li a:active {
         border-bottom: 2px solid var(--color-underline);
+
+        @include respond(tab-port) {
+            border:0;    
+        }
     }
 }
 
 //////////////////////////////////////
 //MOBILE NAV
-.mobile-nav {
-    margin:4rem 0;
+.mobile-nav i {
+    margin:4rem 1rem;
     width: 5rem;
+    font-size: 4rem;
     float: right;
     cursor: pointer;
     display:none;
+
+    @include respond(tab-port) {
+       display: inline-block;
+    }
 }
-
-
-
 
 //////////////////////////////////////
 //STICKY NAV
@@ -126,18 +165,26 @@
     box-shadow: var(--shadow);
     z-index: 9999;
 
+    @include respond(tab-port) {
+        color: var(--color-primary);    
+    }
+
     & .nav li a:link,
     & .nav li a:visited {
         padding: 8px 0;
-        color: var(--color-primary);    
+        color: var(--color-primary);
+        border: 0;    
+
+        @include respond(phone) {
+        padding: 0;
+        }
     }
 }
 
 //////////////////////////////////////
 //FLOW ICON
 .flow-box {
-
-    text-align: center;
+    text-align: center; 
     
 
     &__logo {
@@ -154,13 +201,19 @@
         margin-bottom: 6rem;
         font-weight:300;
         font-size: 1.6rem;
+
+        @include respond(phone) {
+            margin-left: 5rem; 
+            margin-right: 5rem;  
+         }
     }
 }
 
 .center-text {
 
     &__small{
-        margin: 4rem;
+        margin-bottom: 3rem;
+        
     }
 
     &__big {
@@ -178,6 +231,9 @@
         margin-left: 3rem;
     }
 
+    @include respond(tab-port) {
+       display: none;    
+    }
   
 }
 
@@ -196,8 +252,7 @@
 
             	li {
                     text-align: left;                    
-                    padding: 2.5rem 2rem;
-                    
+                    padding: 2.5rem 2rem;                    
                 }
             }
 
@@ -211,7 +266,6 @@
     text-align: center;
     margin-top: -.7rem;
     
-    
     &__logo {
         width:5rem;
         height: auto;
@@ -222,7 +276,7 @@
 //MAP
 .map {
     width: 100%;
-    height: 90rem;
+    height: 70rem;
 }
 
 

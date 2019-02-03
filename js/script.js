@@ -15,12 +15,27 @@ $(document).ready(function () {
 
     /* Animation on scroll with waypoint */
     $('.js--wp-1').waypoint(function (direction) {
-            $('.js--wp-1').addClass('animated pulse');
+        $('.js--wp-1').addClass('animated pulse');
     
     }, {
            offset: '50%'
         });
     
+    /* Mobile nav */
+    $('.js--mobile-nav').click(function() {
+        var nav = $('.js--nav');
+        var icon = $('.js--mobile-nav i');
+       
+        nav.slideToggle(200);
+        
+        if (icon.hasClass('ion-md-menu')) {
+                icon.addClass('ion-md-close');
+                icon.removeClass('ion-md-menu');
+        } else {
+                icon.addClass('ion-md-menu');
+                icon.removeClass('ion-md-close');
+        }      
+    });
 
     /* Maps */ 
     var map = new GMaps({

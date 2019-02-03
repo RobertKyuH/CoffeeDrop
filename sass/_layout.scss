@@ -1,30 +1,66 @@
 .header {
     height: 90vh;
-    background-image: url(../img/shutterstock_326070713@2x.jpg);
+    background-image: url(../img/shutterstock_326070713.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
     
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+            (min-width: 125em) {
+        background-image: url(../img/shutterstock_326070713@2x.jpg);
+    }
+
     &__logo {
         margin:3rem 0;
         height: 5rem;
-        width: auto;     
+        width: auto; 
+        
+        @include respond(tab-port) {
+            float: left;
+            margin:3rem 3rem;
+        }
     }
 
     &__text-box {
         position: absolute;
         /* in relation to parent */
         top: 43rem;
-        
+        margin:3rem 1rem;
+
+        @include respond(big-desktop) {
+            position: absolute;
+            top: 28rem;            
+        }
+
+        @include respond(tab-port) {
+            margin:3rem 3rem;
+        }        
     }
 
     &__phone {
         position: absolute;
+        display: inline-block;
         /* in relation to parent */
         bottom: 0;
-        right: 10rem;
-        height: 70%;
-        width: auto;
+        right: 3rem;
+        height: 60%;        
+
+        @include respond(tab-port) {
+           display: none;
+        }
+
+        &--1 {
+            display: none;
+
+            @include respond(tab-port) {                
+                position: absolute;
+                display: inline-block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height:auto;               
+             }
+        }        
     }
 }
 
@@ -36,32 +72,32 @@
 .section-work {
     background-color: var(--color-grey-light);
     padding: 10rem 0 50rem 0;
-   
+
+    @include respond(tab-port) {
+        padding: 10rem 1rem 100rem 1rem;
+    }   
 }
-
-
 
 .flow-box__center {
     display: inline-block;
 }
 
-
 .section-price {
     background-color: var(--color-primary);
     padding: 10rem 0 50rem 0;
-    
-  
+
+    @include respond(tab-port) {
+        padding: 10rem 2rem 124rem 2rem;
+    }  
 }
 
 .section-map {
-    background-color: var(--color-grey-light); 
-  
+    background-color: var(--color-grey-light);  
 }
 
 .footer {
     background-color: var(--color-primary);
     padding: 1.5rem 0;
-    position: relative;  
-   
+    position: relative;   
 }
 
